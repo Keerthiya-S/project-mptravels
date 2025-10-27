@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - TravelMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <div>
+    <img src="images/mp-logo.png" alt="TravelMate Logo" class="logo img-fluid me-2">
+    <a class="navbar-brand" href="#">MP Travels</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="packages.html">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="india.html">India</a></li>
+            <li><a class="dropdown-item" href="switzerland.html">Switzerland</a></li>
+            <li><a class="dropdown-item" href="maldives.html">Maldives</a></li>
+            <li><a class="dropdown-item" href="dubai.html">Dubai</a></li>
+            <li><a class="dropdown-item" href="thailand.html">Thailand</a></li>
+            <li><a class="dropdown-item" href="singapore.html">Singapore</a></li>
+            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+            <li><a class="dropdown-item" href="italy.html">Italy</a></li>
+            <li><a class="dropdown-item" href="london">London</a></li>
+            <li><a class="dropdown-item" href="usa.html">USA</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- About Header -->
+<header class="about-header">
+    <!-- Firefly animation background -->
+  <canvas id="canvas"></canvas>
+  <div class="about-content">
+    <h1>About MP Travels</h1>
+    <p>Your trusted partner in unforgettable journeys 🌍✈️</p>
+  </div>
+</header>
+<section class="destination-section">
+  <div class="section-header">
+    <h2>Popular Destination</h2>
+    <p>Discover the world’s most loved travel spots and experience unforgettable moments in every destination.</p>
+  </div>
+
+  <div class="destination-grid">
+
+    <div class="destination-card">
+      <img src="images/agra.jpg" alt="Greece">
+      <div class="destination-info">
+        <h3>Family Tour in India</h3>
+        <p>Agra, India</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/thailand.jpg" alt="Thailand">
+      <div class="destination-info">
+        <h3>Temple Visit in Thailand</h3>
+        <p>Bangkok, Thailand</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/italy.jpg" alt="Italy">
+      <div class="destination-info">
+        <h3>Romantic Escape in Italy</h3>
+        <p>Venice, Italy</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/paris.jpg" alt="Paris">
+      <div class="destination-info">
+        <h3>City Lights of Paris</h3>
+        <p>Paris, France</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/dubai_burj.jpg" alt="Dubai">
+      <div class="destination-info">
+        <h3>Adventure in Dubai</h3>
+        <p>Burj Khalifa, Dubai</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/swit.jpg" alt="switzerland">
+      <div class="destination-info">
+        <h3>Nature Trails in Switzerland</h3>
+        <p>Lucerne, Switzerland</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+<div class="destination-card">
+      <img src="images/maldives.jpg" alt="Maldives">
+      <div class="destination-info">
+        <h3>Snorkeling in Maafushi Island</h3>
+        <p>Maafushi Island, Maldives</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="images/supertree.jpg" alt="singapore">
+      <div class="destination-info">
+        <h3>Light Show in Singapore</h3>
+        <p>Super Tree, Singapore</p>
+        <span>₹25,000</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Promo Section Start -->
+<section class="promo-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Text Content -->
+      <div class="col-lg-6 text-white mb-4 mb-lg-0">
+        <h1 class="display-4 fw-bold"><span style="color: rgba(235, 156, 11, 0.9);">45%</span> OFF SALE</h1>
+        <h4 class="mb-3">Just hurry up limited offer!</h4>
+        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-outline-light fw-semibold me-2 px-4 py-2">Book Now</a>
+          <a href="#" class="btn btn-outline-light fw-semibold px-4 py-2">Read more</a>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 position-relative">
+        <div class="promo-img position-relative overflow-hidden rounded-3">
+          <img src="images/nature.jpg" class="img-fluid" alt="Beach View">
+          <div class="video-icon position-absolute top-50 start-50 translate-middle bg-white rounded-circle shadow d-flex justify-content-center align-items-center" style="width:80px; height:80px;">
+            <i class="bi bi-camera-video-fill" style="font-size: 1.8rem; color: rgba(235, 156, 11, 0.9);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mission & Vision Section -->
+<section class="mission-vision py-5">
+  <div class="overlay"></div>
+  <div class="container position-relative text-center text-white">
+    <h2 class="section-title mb-5">Our Mission & Vision</h2>
+    <div class="row g-5 justify-content-center">
+      
+      <!-- Mission -->
+      <div class="col-md-6">
+        <div class="mv-card">
+          <div class="mv-icon mb-3">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="fw-bold mb-3">Our Mission</h3>
+          <p>
+            To make travel accessible, affordable, and enjoyable for everyone while delivering 
+            exceptional service and unforgettable experiences.
+          </p>
+          <ul class="list-unstyled text-start d-inline-block mt-3">
+            <li>✔ Affordable and flexible travel plans</li>
+            <li>✔ Personalized packages for every traveler</li>
+            <li>✔ Support for sustainable and eco-friendly tourism</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vision -->
+      <div class="col-md-6">
+        <div class="mv-card">
+          <div class="mv-icon mb-3">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="fw-bold mb-3">Our Vision</h3>
+          <p>
+            To be the most trusted and innovative travel partner, inspiring people to 
+            explore the beauty of the world with comfort and joy.
+          </p>
+          <ul class="list-unstyled text-start d-inline-block mt-3">
+            <li>✔ Building lifelong memories for travelers</li>
+            <li>✔ Bringing cultures and communities closer</li>
+            <li>✔ Innovation-driven travel experiences</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Team -->
+<section class="py-5 team-section">
+  <div class="container text-center">
+    <h2 class="mb-4">Meet Our Team</h2>
+    <p class="mb-5">We are passionate professionals dedicated to creating memorable travel experiences.</p>
+    <div class="row">
+      <!-- CEO -->
+<div class="col-md-4">
+  <div class="card team-card">
+    <img src="images/ananya.jpg" class="card-img-top team-img" alt="CEO">
+    <div class="card-body">
+      <h5 class="card-title">Ananya Sharma</h5>
+      <p class="card-text">Founder & CEO</p>
+      <div>
+        <a href="#"><i class="fab fa-facebook me-2"></i></a>
+        <a href="#"><i class="fab fa-twitter me-2"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Manager -->
+      <div class="col-md-4">
+        <div class="card team-card">
+          <img src="images/rahul.jpg" class="card-img-top team-img" alt="Manager">
+          <div class="card-body">
+            <h5 class="card-title">Rahul Verma</h5>
+            <p class="card-text">Travel Manager</p>
+            <div>
+              <a href="#"><i class="fab fa-facebook me-2"></i></a>
+              <a href="#"><i class="fab fa-twitter me-2"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guide -->
+      <div class="col-md-4">
+        <div class="card team-card">
+          <img src="images/sara1.jpg" class="card-img-top team-img" alt="Guide">
+          <div class="card-body">
+            <h5 class="card-title">Sara Ali</h5>
+            <p class="card-text">Tour Guide</p>
+            <div>
+              <a href="#"><i class="fab fa-facebook me-2"></i></a>
+              <a href="#"><i class="fab fa-twitter me-2"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing Head -->
+      <div class="col-md-4 mt-4">
+        <div class="card team-card">
+          <img src="images/vikram.jpg" class="card-img-top team-img" alt="Marketing">
+          <div class="card-body">
+            <h5 class="card-title">Vikram Singh</h5>
+            <p class="card-text">Marketing Head</p>
+            <div>
+              <a href="#"><i class="fab fa-facebook me-2"></i></a>
+              <a href="#"><i class="fab fa-twitter me-2"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Support -->
+      <div class="col-md-4 mt-4">
+        <div class="card team-card">
+          <img src="images/priya.jpg" class="card-img-top team-img" alt="Support">
+          <div class="card-body">
+            <h5 class="card-title">Priya Nair</h5>
+            <p class="card-text">Customer Support</p>
+            <div>
+              <a href="#"><i class="fab fa-facebook me-2"></i></a>
+              <a href="#"><i class="fab fa-twitter me-2"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photographer -->
+      <div class="col-md-4 mt-4">
+        <div class="card team-card">
+          <img src="images/karan.jpg" class="card-img-top team-img" alt="Photographer">
+          <div class="card-body">
+            <h5 class="card-title">Karan Mehta</h5>
+            <p class="card-text">Travel Photographer</p>
+            <div>
+              <a href="#"><i class="fab fa-facebook me-2"></i></a>
+              <a href="#"><i class="fab fa-twitter me-2"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="popular-countries py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Most Popular Travel Countries</h2>
+      <p class="text-muted">
+        We love to tell our successful far far away, behind the word mountains, 
+        far from the countries Vokalia and Consonantia, there live the blind texts.
+      </p>
+    </div>
+
+    <div class="row align-items-start">
+      <!-- Left side: Images -->
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="img-box position-relative overflow-hidden rounded-3">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="img-fluid rounded-3" alt="">
+              <div class="img-overlay">
+                <h6>ROME - 5 DAYS</h6>
+                <p>$120 / person</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="img-box position-relative overflow-hidden rounded-3">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="img-fluid rounded-3" alt="">
+              <div class="img-overlay">
+                <h6>ROME - 5 DAYS</h6>
+                <p>$120 / person</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="img-box position-relative overflow-hidden rounded-3">
+              <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f" class="img-fluid rounded-3" alt="">
+              <div class="img-overlay">
+                <h6>ROME - 5 DAYS</h6>
+                <p>$120 / person</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="img-box position-relative overflow-hidden rounded-3">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="img-fluid rounded-3" alt="">
+              <div class="img-overlay">
+                <h6>ROME - 5 DAYS</h6>
+                <p>$120 / person</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Description -->
+      <div class="col-lg-5 mt-4 mt-lg-0">
+        <h5 class="fw-bold text-uppercase mb-3">Italy, Europe</h5>
+        <p class="text-muted">
+          Far far away, behind the word mountains, far from the countries Vokalia 
+          and Consonantia, there live the blind texts. Separated they live in 
+          Bookmarksgrove right at the coast of the Semantics, a large language ocean. 
+          A small river named Duden flows by their place and supplies it with the 
+          necessary regelialia.
+        </p>
+
+        <h6 class="fw-bold mt-4 mb-3">Best Tours City</h6>
+        <div class="row">
+          <div class="col-4">
+            <ul class="list-unstyled text-muted">
+              <li>Rome</li>
+              <li>Milan</li>
+              <li>Genoa</li>
+              <li>Verona</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="list-unstyled text-muted">
+              <li>Venice</li>
+              <li>Bologna</li>
+              <li>Trieste</li>
+              <li>Florence</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="list-unstyled text-muted">
+              <li>Palermo</li>
+              <li>Siena</li>
+              <li>San Marino</li>
+              <li>Naples</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn view-btn mt-3 px-4 py-2 fw-semibold">
+          View All Places
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <!-- Logo & Description -->
+      <div class="footer-col">
+        <img src="images/mp-logo.png" alt="mp Travels" class="footer-logo">
+        <p>Best Travel, Tours and Car Services in South India. We offer special packages.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Information Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Packages Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Popular Packages</h4>
+          <ul>
+            <li><a href="maldives.html">Maldives</a></li>
+            <li><a href="paris.html">Paris</a></li>
+            <li><a href="dubai.html">Dubai</a></li>
+            <li><a href="india.html">India</a></li>
+          </ul>
+        </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Official Info</h4>
+        <p><strong>Head Office:</strong> 28 Muthuramalingapuram, 2nd Street, K. Pudur, Madurai-7.</p>
+        <p><strong>Email:</strong> mptravelsmadurai@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9677519253, 6382073734</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <hr>
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="year"></span> MP Travels. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+
+class firefly {
+  constructor() {
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.s = Math.random() * 2;
+    this.ang = Math.random() * 2 * Math.PI;
+    this.v = (this.s * this.s) / 4;
+  }
+  move() {
+    this.x += this.v * Math.cos(this.ang);
+    this.y += this.v * Math.sin(this.ang);
+    this.ang += Math.random() * (20 * Math.PI / 180) - (10 * Math.PI / 180);
+  }
+  show() {
+    c.beginPath();
+    c.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
+    c.fillStyle = "#fddba3";
+    c.shadowBlur = 8;      /* soft glow effect */
+    c.shadowColor = "#fddba3";
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  if (f.length < 100) {
+    for (let j = 0; j < 10; j++) f.push(new firefly());
+  }
+  for (let i = 0; i < f.length; i++) {
+    f[i].move();
+    f[i].show();
+    if (f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h) {
+      f.splice(i, 1);
+    }
+  }
+}
+
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+});
+
+loop();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            offset: 100, // offset (in px) from the original trigger point
+            once: true, // whether animation should happen only once
+        });
+    </script>
+</body>
+</html>

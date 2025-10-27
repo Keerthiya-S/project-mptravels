@@ -1,0 +1,263 @@
+/* Contact Page Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+.nav-item.dropdown .nav-link::after {
+  display: none;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+/* Transparent background */
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  padding: 10px;
+}
+/* Dropdown links styling */
+.dropdown-item {
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.934);
+}
+/* Initial transparent navbar */
+.navbar {
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+/* After scroll */
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contact-section {
+  position: relative;
+  background: url('images/travel-contact.jpeg') center/cover no-repeat;
+  padding: 40px;
+  color: #fff; /* optional: makes text readable */
+  z-index: 1;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* black overlay */
+  z-index: -1;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 20px; /* reduced from 30px */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form .mb-3 {
+  margin-bottom: 10px; /* reduced from default ~1rem */
+}
+
+.contact-section h2 {
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 15px; /* reduced from 1.5–2rem */
+  font-size: 1.5rem; /* slightly smaller heading */
+}
+
+.contact-section .form-control {
+  border-radius: 8px;
+  padding: 6px 10px; /* smaller input padding */
+  font-size: 0.95rem;
+}
+
+.contact-section .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 0; /* reduced button height */
+}
+
+
+.contact-info {
+  background: #e9ecef;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.contact-info i {
+  color: #007bff;
+  margin-right: 8px;
+}
+/* Booking Section with Background Image */
+.booking-section {
+  position: relative;
+  padding: 80px 0;
+}
+
+
+.booking-section h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.booking-section .container {
+  position: relative;
+  z-index: 2; /* keep form above overlay */
+}
+
+.booking-form {
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.booking-form input,
+.booking-form select {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.booking-form button {
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+.booking-form button:hover {
+  background-color: #0056b3;
+}
+footer {
+  background: #e3e8ed;
+  color: black;
+  padding: 20px 0;
+}
+.contact-info-map {
+  background-image: url('./images/contactbackground.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+/* Optional: add overlay for readability */
+.contact-info-map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.contact-info-map .container,
+.contact-info-map .row {
+  position: relative;
+  z-index: 2; /* keep content above overlay */
+}
+/* Disable dropdown on mobile */
+@media (max-width: 767.98px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important; /* don't show dropdown on hover/tap */
+  }
+}
+/* FAQ Section */
+.faq-section {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.faq-section h2 {
+  font-weight: 700;
+  color: rgba(240, 180, 25, 1) !important;
+}
+
+.accordion-button {
+  font-weight: 600;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(235, 156, 11, 0.3),  /* soft gold */
+    rgba(3, 165, 56, 0.1)     /* very light green hint */
+  );
+  color: #0b7d3f; /* subtle green text for harmony */
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0b7d3f; /* green text tone */
+  background: linear-gradient(
+    135deg,
+    rgba(235, 156, 11, 0.3),  /* soft gold */
+    rgba(3, 165, 56, 0.1)     /* very light green hint */
+  );
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+  .faq-section {
+    padding: 40px 15px;
+  }
+  .accordion-button {
+    font-size: 0.95rem;
+  }
+}

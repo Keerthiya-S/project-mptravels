@@ -1,0 +1,512 @@
+/* Import Bootstrap icons if not already */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+
+.services-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
+/* Each Service Box */
+.service-box {
+  flex: 1 1 25%;
+  padding: 60px 30px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+/* Icon Style */
+.service-box .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: rgba(5, 217, 75, 0.3); /* subtle green hint */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: rgba(235, 156, 11, 0.9); /* gold icon color */
+}
+
+
+/* Text */
+.service-box h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.service-box p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+
+
+/* Hover Effect */
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(129, 241, 166, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .service-box {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.nav-item.dropdown .nav-link::after {
+  display: none;
+}
+
+/* Initial transparent navbar */
+.navbar {
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+/* After scroll */
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+/* Transparent background */
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  padding: 10px;
+}
+
+/* Dropdown links styling */
+.dropdown-item {
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.934);
+}
+
+/* Hero Section */
+.packages-hero {
+  background: url("images/nature.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay to darken image for better text visibility */
+.packages-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* adjust opacity as needed */
+  z-index: 1;
+
+}
+
+.packages-hero canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* below text but above background */
+  filter: blur(1px);
+}
+
+.packages-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.packages-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.packages-hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+
+/* Packages Section */
+.package-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.package-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.package-card .card-body {
+  text-align: center;
+}
+
+.package-card .btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+/* Make card titles uppercase */
+.package-card .card-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Smooth zoom effect on image */
+.package-card img {
+  transition: transform 0.5s ease;
+  /* smooth animation */
+}
+
+.package-card:hover img {
+  transform: scale(1.05);
+  /* zoom slightly */
+}
+
+/* Booking Section with Background Image */
+.booking-section {
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center/cover;
+  position: relative;
+  padding: 80px 0;
+}
+
+.booking-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.booking-section h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.booking-section .container {
+  position: relative;
+  z-index: 2;
+  /* keep form above overlay */
+}
+
+.booking-form {
+  background: rgba(255, 255, 255, 0.9);
+  /* semi-transparent white */
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.booking-form input,
+.booking-form select {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.booking-form button {
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+.booking-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Disable dropdown on mobile */
+@media (max-width: 767.98px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important;
+    /* don't show dropdown on hover/tap */
+  }
+}
+
+/* Footer Styles */
+.site-footer {
+  background: linear-gradient(135deg, rgba(47, 179, 91, 0.95), rgba(245, 180, 60, 0.9));
+  color: #fff;
+  padding: 60px 0 20px;
+  /* ⬅ reduced bottom padding */
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.site-footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.site-footer .footer-col {
+  flex: 1 1 220px;
+}
+
+.site-footer .footer-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+.site-footer h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+}
+
+.site-footer h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: rgba(235, 156, 11, 1);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs & Links */
+.site-footer p,
+.site-footer li a {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.7;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer ul li {
+  margin-bottom: 8px;
+}
+
+.site-footer ul li::before {
+  content: "•";
+  color: rgba(235, 156, 11, 1);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Social Icons */
+.site-footer .social-icons {
+  margin-top: 15px;
+}
+
+.site-footer .social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 10px;
+  background: rgba(3, 165, 56, 1);
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+  background: rgba(235, 156, 11, 1);
+}
+
+/* Divider + Copyright */
+.site-footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0 10px;
+  /* ⬅ tightened spacing */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/*🔥 HERO RESPONSIVE STYLES */
+/* For large tablets and smaller desktops (max width 1200px) */
+@media (max-width: 1200px) {
+  .packages-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .packages-hero p {
+    font-size: 1.1rem;
+  }
+
+  .packages-hero .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* For tablets (max width 992px) */
+@media (max-width: 992px) {
+  .packages-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .packages-hero p {
+    font-size: 1rem;
+  }
+
+  .packages-hero .btn {
+    font-size: 0.95rem;
+    padding: 10px 22px;
+  }
+}
+
+/* For small tablets and large phones (max width 768px) */
+@media (max-width: 768px) {
+  .packages-hero {
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .packages-hero h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .packages-hero p {
+    font-size: 0.95rem;
+  }
+
+  .packages-hero .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* For mobile screens (max width 576px) */
+@media (max-width: 576px) {
+  .packages-hero {
+    padding: 60px 15px;
+  }
+
+  .packages-hero h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .packages-hero p {
+    font-size: 1rem;
+  }
+
+  .packages-hero .btn {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+
+  /* Optional: reduce blur and firefly intensity for performance */
+  .packages-hero canvas {
+    filter: blur(0.5px);
+  }
+}
+
+/* For very small screens (max width 400px) */
+@media (max-width: 400px) {
+  .packages-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .packages-hero p {
+    font-size: 1rem;
+  }
+
+  .packages-hero .btn {
+    font-size: 0.8rem;
+    padding: 6px 16px;
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .site-footer .footer-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .site-footer .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .site-footer h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

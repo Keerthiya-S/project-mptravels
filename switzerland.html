@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelMate - Switzerland</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="packages.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    .place-img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .package-card {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <div>
+    <img src="images/mp-logo.png" alt="TravelMate Logo" class="logo img-fluid me-2">
+    <a class="navbar-brand" href="#">MP Travels</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="packages.html">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="india.html">India</a></li>
+            <li><a class="dropdown-item" href="switzerland.html">Switzerland</a></li>
+            <li><a class="dropdown-item" href="maldives.html">Maldives</a></li>
+            <li><a class="dropdown-item" href="dubai.html">Dubai</a></li>
+            <li><a class="dropdown-item" href="thailand.html">Thailand</a></li>
+            <li><a class="dropdown-item" href="singapore.html">Singapore</a></li>
+            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+            <li><a class="dropdown-item" href="italy.html">Italy</a></li>
+            <li><a class="dropdown-item" href="london">London</a></li>
+            <li><a class="dropdown-item" href="usa.html">USA</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Hero Section -->
+  <header class="packages-hero text-white text-center d-flex align-items-center"
+          style="background-image:url('images/swit.jpg');">
+          <!-- Firefly animation background -->
+  <canvas id="canvas"></canvas>
+    <div class="container">
+      <h1 class="display-4" data-aos="fade-up">Explore Switzerland</h1>
+      <p class="lead" data-aos="fade-up">Alpine beauty, lakes, and unforgettable experiences!</p>
+    </div>
+  </header>
+
+  <!-- Switzerland Packages Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Zurich -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/zurich.jpg" class="card-img-top" alt="Zurich">
+          <div class="card-body">
+            <h5 class="card-title">Zurich (2 Days)</h5>
+            <p class="card-text">City tours, shopping & Lake Zurich views.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#zurichModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lucerne -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/lucerne.avif" class="card-img-top" alt="Lucerne">
+          <div class="card-body">
+            <h5 class="card-title">Lucerne (2 Days)</h5>
+            <p class="card-text">Mountains, lakes & medieval charm.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lucerneModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interlaken -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/interlaken.jpg" class="card-img-top" alt="Interlaken">
+          <div class="card-body">
+            <h5 class="card-title">Interlaken (2 Days)</h5>
+            <p class="card-text">Adventure sports & Jungfrau region.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interlakenModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Zurich Modal -->
+<div class="modal fade" id="zurichModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+        <h5 class="modal-title">Zurich Itinerary</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Day 1: Bahnhofstrasse shopping & Old Town</li>
+          <li>Day 2: Lake Zurich boat ride & Swiss National Museum</li>
+        </ul>
+        <div class="row g-2">
+          <div class="col-6"><img src="images/oldtown.jpg" class="place-img w-100" alt="Old Town Zurich"></div>
+          <div class="col-6"><img src="images/lakezurich.webp" class="place-img w-100" alt="Lake Zurich"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lucerne Modal -->
+<div class="modal fade" id="lucerneModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+        <h5 class="modal-title">Lucerne Itinerary</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Day 1: Chapel Bridge & Old Town walk</li>
+          <li>Day 2: Mt. Pilatus cable car & Lake Lucerne cruise</li>
+        </ul>
+        <div class="row g-2">
+          <div class="col-6"><img src="images/chapelbridge.jpg" class="place-img w-100" alt="Chapel Bridge"></div>
+          <div class="col-6"><img src="images/pilatus.webp" class="place-img w-100" alt="Mount Pilatus"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Interlaken Modal -->
+<div class="modal fade" id="interlakenModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+        <h5 class="modal-title">Interlaken Itinerary</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Day 1: Paragliding & Harder Kulm viewpoint</li>
+          <li>Day 2: Train ride to Jungfraujoch (Top of Europe)</li>
+        </ul>
+        <div class="row g-2">
+          <div class="col-6"><img src="images/paragliding.jpg" class="place-img w-100" alt="Paragliding"></div>
+          <div class="col-6"><img src="images/jungfrau.jpg" class="place-img w-100" alt="Jungfraujoch"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <!-- Logo & Description -->
+      <div class="footer-col" data-aos="fade-right">
+        <img src="images/mp-logo.png" alt="mp Travels" class="footer-logo">
+        <p>Best Travel, Tours and Car Services in South India. We offer special packages.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Information Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Packages Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Popular Packages</h4>
+          <ul>
+            <li><a href="maldives.html">Maldives</a></li>
+            <li><a href="paris.html">Paris</a></li>
+            <li><a href="dubai.html">Dubai</a></li>
+            <li><a href="india.html">India</a></li>
+          </ul>
+        </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col" data-aos="fade-right">
+        <h4>Official Info</h4>
+        <p><strong>Head Office:</strong> 28 Muthuramalingapuram, 2nd Street, K. Pudur, Madurai-7.</p>
+        <p><strong>Email:</strong> mptravelsmadurai@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9677519253, 6382073734</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <hr>
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="year"></span> MP Travels. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+
+class firefly {
+  constructor() {
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.s = Math.random() * 2;
+    this.ang = Math.random() * 2 * Math.PI;
+    this.v = (this.s * this.s) / 4;
+  }
+  move() {
+    this.x += this.v * Math.cos(this.ang);
+    this.y += this.v * Math.sin(this.ang);
+    this.ang += Math.random() * (20 * Math.PI / 180) - (10 * Math.PI / 180);
+  }
+  show() {
+    c.beginPath();
+    c.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
+    c.fillStyle = "#fddba3";
+    c.shadowBlur = 8;      /* soft glow effect */
+    c.shadowColor = "#fddba3";
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  if (f.length < 100) {
+    for (let j = 0; j < 10; j++) f.push(new firefly());
+  }
+  for (let i = 0; i < f.length; i++) {
+    f[i].move();
+    f[i].show();
+    if (f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h) {
+      f.splice(i, 1);
+    }
+  }
+}
+
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+});
+
+loop();
+</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            offset: 100, // offset (in px) from the original trigger point
+            once: true, // whether animation should happen only once
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,762 @@
+/* Import Bootstrap icons if not already */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+
+/* =======================
+   Navbar & Dropdown
+======================= */
+/* Hide default Bootstrap dropdown arrow */
+.nav-item.dropdown .nav-link::after {
+  display: none;
+}
+
+/* Show dropdown on hover (grid style) */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+/* Navbar background gradient */
+.navbar {
+  background: linear-gradient(to right, rgba(237, 106, 89, 0.85) 0%, rgba(147, 178, 211, 0.85) 100%);
+}
+/* Initial transparent navbar */
+.navbar {
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+/* After scroll */
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  padding: 10px;
+}
+
+/* Dropdown links */
+.dropdown-item {
+  color: #fff;
+  transition: background 0.3s;
+}
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.934);
+  color: #000;
+}
+
+
+
+/* About Header (hero-like) */
+/* About Header */
+.about-header {
+  background: url('images/bg_5.jpg') no-repeat center center/cover;
+  height: 100vh; /* shorter than hero for better layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* ensures canvas stays within section */
+}
+
+.about-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* adjust opacity as needed */
+  z-index: 1;
+}
+.about-header canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* below text but above background */
+  filter: blur(1px);
+}
+.about-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.3rem;
+}
+.who-we-are img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.who-we-are img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* =======================
+   Why Choose Us Timeline
+======================= */
+/* Why Choose Us */
+.why-choose-us {
+  background: linear-gradient(135deg, rgba(235, 156, 11, 0.1), rgba(3, 165, 56, 0.1));
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title span {
+  color: rgba(235, 156, 11, 0.9);
+}
+
+/* Decorative line under heading */
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, rgba(235,156,11,0.9), rgba(3,165,56,0.9));
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Timeline setup */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(235,156,11,0.9), rgba(3,165,56,0.9));
+  transform: translateX(-50%);
+  border-radius: 4px;
+  animation: glowLine 3s infinite alternate;
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Icon */
+.timeline-icon {
+  background: white;
+  border: 4px solid rgba(235,156,11,0.9);
+  color: rgba(235,156,11,0.9);
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(235,156,11,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(3,165,56,0.6);
+}
+
+/* Content Box */
+.timeline-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  flex: 1;
+  position: relative;
+}
+.timeline-content p{
+  font-size: 1rem;
+}
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: -10px;
+  box-shadow: -3px -3px 6px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: -10px;
+  box-shadow: 3px -3px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover animation for cards */
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, rgba(235,156,11,0.9), rgba(3,165,56,0.9));
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(3,165,56,0.4);
+}
+
+.timeline-item:hover .timeline-content h4 {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .timeline-content::before {
+    left: 10px !important;
+  }
+
+  .timeline-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Glow animation */
+@keyframes glowLine {
+  from {
+    box-shadow: 0 0 10px rgba(235,156,11,0.7);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(3,165,56,0.7);
+  }
+}
+
+/* ===== Mission & Vision Section ===== */
+.mission-vision {
+  position: relative;
+  color: black;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.mission-vision .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: rgba(235, 156, 11, 0.9);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(235, 156, 11, 0.2);
+}
+
+/* Mission/Vision Cards */
+.mv-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(235, 156, 11, 0.4);
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(235, 156, 11, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Icons */
+.mv-icon {
+  font-size: 3rem;
+  color: rgba(235, 156, 11, 0.9);
+  transition: transform 0.5s ease;
+}
+
+.mv-card:hover .mv-icon {
+  transform: rotate(10deg) scale(1.2);
+  color: rgba(3, 165, 56, 0.9);
+}
+
+/* Text */
+.mv-card p {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.6;
+}
+
+.mv-card ul li {
+  font-size: 0.95rem;
+  color: black;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .mv-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision {
+    padding: 50px 20px;
+  }
+  .mv-icon {
+    font-size: 2.5rem;
+  }
+  .mv-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .mv-card {
+    padding: 20px;
+  }
+}
+
+
+/* ====== TEAM SECTION STYLE ====== */
+.team-section {
+  position: relative;
+  background: url(images/banner.jpg)
+    center/cover no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+.team-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* dark overlay */
+  z-index: 1;
+}
+
+.team-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-weight: 700;
+  color: rgba(235, 156, 11, 0.9);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  color: #f0f0f0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(235, 156, 11, 0.4);
+  border-radius: 15px;
+  padding-top: 25px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(235, 156, 11, 0.6);
+}
+
+/* Image Wrapper with glow */
+.team-img-wrapper {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(235, 156, 11, 0.9), rgba(3, 165, 56, 0.3));
+}
+
+.team-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;        /* ensures no stretching */
+  object-position: center;  /* centers the photo inside the circle */
+  border-radius: 50%;
+  border: 3px solid #fff;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;           /* ensures the image stays centered horizontally */
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.05);
+}
+
+/* Text Styling */
+.card-body h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  color: rgba(235, 156, 11, 0.9);
+  font-weight: 500;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: white;
+  background: rgba(235, 156, 11, 0.9);
+  margin: 0 6px;
+  width: 36px; height: 36px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(3, 165, 56, 0.9);
+  transform: scale(1.1);
+}
+
+
+/* Disable dropdown on mobile */
+@media (max-width: 767.98px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: none !important; /* don't show dropdown on hover/tap */
+  }
+}
+
+.destination-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: rgba(235, 156, 11, 0.9); /* gold heading */
+}
+
+.section-header p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(3, 165, 56, 0.2);
+  transition: all 0.4s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.destination-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(236, 192, 110, 0.9), rgba(112, 209, 144, 0.8));
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  transition: bottom 0.4s ease;
+}
+
+.destination-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.destination-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.destination-info span {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Hover Effect */
+.destination-card:hover img {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.destination-card:hover .destination-info {
+  bottom: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .section-header h2 {
+    font-size: 30px;
+  }
+
+  .destination-card img {
+    height: 240px;
+  }
+
+  .destination-info h3 {
+    font-size: 18px;
+  }
+
+  .destination-info p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .destination-section {
+    padding: 60px 30px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .section-header p {
+    font-size: 15px;
+  }
+
+  .destination-card img {
+    height: 220px;
+  }
+
+  .destination-info {
+    padding: 15px;
+  }
+
+  .destination-info h3 {
+    font-size: 17px;
+  }
+
+  .destination-info span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .destination-section {
+    padding: 50px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .destination-grid {
+    gap: 20px;
+  }
+
+  .destination-card {
+    max-width: 100%;
+  }
+
+  .destination-card img {
+    height: 200px;
+  }
+
+  .destination-info {
+    font-size: 13px;
+  }
+
+  .destination-info h3 {
+    font-size: 16px;
+  }
+}
+
+.promo-section {
+  position: relative;
+  background-image: url(images/bg_5.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Black overlay */
+.promo-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* adjust opacity 0.4–0.7 as you like */
+  z-index: -1; /* stays behind the text */
+}
+
+/* Keep content above overlay */
+.promo-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-img img {
+  transition: transform 0.5s ease;
+}
+.promo-img:hover img {
+  transform: scale(1.05);
+}
+
+.popular-countries {
+  font-family: 'Poppins', sans-serif;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+}
+
+.img-overlay h6 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.img-overlay p {
+  color: rgba(235, 156, 11, 0.9);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.view-btn {
+  background-color: rgba(235, 156, 11, 0.9);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: rgba(3, 165, 56, 0.9);
+  color: #fff;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelMate - Dubai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="packages.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* page-local tweaks (keep minimal; most styles live in packages.css) */
+    .place-img { height: 160px; object-fit: cover; border-radius: 8px; }
+    .package-card { margin-bottom: 30px; }
+    .packages-hero {
+  background-image: url('images/dubai_hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;  /* full screen height */
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar (same structure you’re using elsewhere: Packages opens on hover, no arrow) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <div>
+    <img src="images/mp-logo.png" alt="TravelMate Logo" class="logo img-fluid me-2">
+    <a class="navbar-brand" href="#">MP Travels</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="packages.html">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="india.html">India</a></li>
+            <li><a class="dropdown-item" href="switzerland.html">Switzerland</a></li>
+            <li><a class="dropdown-item" href="maldives.html">Maldives</a></li>
+            <li><a class="dropdown-item" href="dubai.html">Dubai</a></li>
+            <li><a class="dropdown-item" href="thailand.html">Thailand</a></li>
+            <li><a class="dropdown-item" href="singapore.html">Singapore</a></li>
+            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+            <li><a class="dropdown-item" href="italy.html">Italy</a></li>
+            <li><a class="dropdown-item" href="london">London</a></li>
+            <li><a class="dropdown-item" href="usa.html">USA</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Hero -->
+  <header class="packages-hero text-white text-center d-flex align-items-center"
+          style="background-image:url('images/dubai_hero.webp');">
+          <!-- Firefly animation background -->
+  <canvas id="canvas"></canvas>
+    <div class="container">
+      <h1 class="display-4" data-aos="fade-up">Discover Dubai</h1>
+      <p class="lead" data-aos="fade-up">Skyscrapers, deserts, souks, and world-class attractions.</p>
+    </div>
+  </header>
+
+  <!-- Dubai Packages -->
+ <!-- Dubai Packages -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Downtown Dubai & Burj Khalifa -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/dubai_burj.jpg" class="card-img-top" alt="Burj Khalifa & Downtown">
+          <div class="card-body">
+            <h5 class="card-title">Downtown & Burj Khalifa (1 Day)</h5>
+            <p class="card-text">Observation deck, Dubai Mall & Fountain show.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#downtownModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Downtown Dubai -->
+      <div class="modal fade" id="downtownModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Downtown & Burj Khalifa Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Burj Khalifa At The Top (124/125/148th floors)</li>
+                <li>Dubai Mall & Aquarium (optional)</li>
+                <li>Dubai Fountain evening show & Souk Al Bahar</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/burj_top.png" class="place-img w-100" alt="Burj Khalifa"></div>
+                <div class="col-6"><img src="images/dubai_fountain.jpg" class="place-img w-100" alt="Dubai Fountain"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desert Safari -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/desert_safari.png" class="card-img-top" alt="Desert Safari">
+          <div class="card-body">
+            <h5 class="card-title">Desert Safari (Half/Full Day)</h5>
+            <p class="card-text">Dune bashing, camel ride & BBQ dinner.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#desertModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Desert Safari -->
+      <div class="modal fade" id="desertModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Desert Safari Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>4x4 dune bashing & sandboarding</li>
+                <li>Camel ride & henna</li>
+                <li>BBQ dinner with live shows at desert camp</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/dune-bashing.jpg" class="place-img w-100" alt="Dune Bashing"></div>
+                <div class="col-6"><img src="images/desert_camp.jpg" class="place-img w-100" alt="Desert Camp"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palm Jumeirah & Atlantis -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/dubai_palm.jpg" class="card-img-top" alt="Palm Jumeirah & Atlantis">
+          <div class="card-body">
+            <h5 class="card-title">Palm Jumeirah & Atlantis (1 Day)</h5>
+            <p class="card-text">Monorail views, Aquaventure & The Pointe.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#palmModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Palm Jumeirah -->
+      <div class="modal fade" id="palmModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Palm Jumeirah & Atlantis Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Palm Monorail & Atlantis photo stop</li>
+                <li>Aquaventure Waterpark / Lost Chambers (optional)</li>
+                <li>The Pointe promenade evening stroll</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/atlantis.avif" class="place-img w-100" alt="Atlantis"></div>
+                <div class="col-6"><img src="images/the_pointe.png" class="place-img w-100" alt="The Pointe"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Old Dubai -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/dubai_old.jpg" class="card-img-top" alt="Old Dubai">
+          <div class="card-body">
+            <h5 class="card-title">Old Dubai (Half Day)</h5>
+            <p class="card-text">Souks, creek abra & heritage district.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#olddubaiModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Old Dubai -->
+      <div class="modal fade" id="olddubaiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Old Dubai Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Gold & Spice Souks (Deira)</li>
+                <li>Abra ride across Dubai Creek</li>
+                <li>Al Fahidi Historical Neighborhood & Museum</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/spice_souk.jpg" class="place-img w-100" alt="Spice Souk"></div>
+                <div class="col-6"><img src="images/al_fahidi.jpg" class="place-img w-100" alt="Al Fahidi"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abu Dhabi -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/abu_dhabi.avif" class="card-img-top" alt="Abu Dhabi">
+          <div class="card-body">
+            <h5 class="card-title">Abu Dhabi Day Trip</h5>
+            <p class="card-text">Grand Mosque, Corniche & Louvre (optional).</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#abudhabiModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Abu Dhabi -->
+      <div class="modal fade" id="abudhabiModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Abu Dhabi Day Trip Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Sheikh Zayed Grand Mosque</li>
+                <li>Abu Dhabi Corniche & Heritage Village</li>
+                <li>Louvre Abu Dhabi / Qasr Al Watan (optional)</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/grand_mosque.jpg" class="place-img w-100" alt="Grand Mosque"></div>
+                <div class="col-6"><img src="images/louvre_ad.webp" class="place-img w-100" alt="Louvre Abu Dhabi"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marina & JBR -->
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card package-card">
+          <img src="images/dubai_marina.jpg" class="card-img-top" alt="Dubai Marina & JBR">
+          <div class="card-body">
+            <h5 class="card-title">Marina & JBR (Evening)</h5>
+            <p class="card-text">Skylines, beach walk & dinner cruise.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#marinaModal">View Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Marina & JBR -->
+      <div class="modal fade" id="marinaModal" tabindex="-1">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgba(240,180,25,1); color: white;">
+              <h5 class="modal-title">Marina & JBR Itinerary</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Dubai Marina Walk & Bluewaters (Ain Dubai view)</li>
+                <li>JBR Beach leisure</li>
+                <li>Dhow dinner cruise (optional)</li>
+              </ul>
+              <div class="row g-2">
+                <div class="col-6"><img src="images/marina_walk.jpg" class="place-img w-100" alt="Marina Walk"></div>
+                <div class="col-6"><img src="images/jbr.jpg" class="place-img w-100" alt="JBR"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <!-- Logo & Description -->
+      <div class="footer-col" data-aos="fade-right">
+        <img src="images/mp-logo.png" alt="mp Travels" class="footer-logo">
+        <p>Best Travel, Tours and Car Services in South India. We offer special packages.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Information Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Packages Links -->
+        <div class="footer-col" data-aos="fade-right">
+          <h4>Popular Packages</h4>
+          <ul>
+            <li><a href="maldives.html">Maldives</a></li>
+            <li><a href="paris.html">Paris</a></li>
+            <li><a href="dubai.html">Dubai</a></li>
+            <li><a href="india.html">India</a></li>
+          </ul>
+        </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col" data-aos="fade-right">
+        <h4>Official Info</h4>
+        <p><strong>Head Office:</strong> 28 Muthuramalingapuram, 2nd Street, K. Pudur, Madurai-7.</p>
+        <p><strong>Email:</strong> mptravelsmadurai@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9677519253, 6382073734</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <hr>
+    <div class="footer-bottom text-center">
+      <p>&copy; <span id="year"></span> MP Travels. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+
+class firefly {
+  constructor() {
+    this.x = Math.random() * w;
+    this.y = Math.random() * h;
+    this.s = Math.random() * 2;
+    this.ang = Math.random() * 2 * Math.PI;
+    this.v = (this.s * this.s) / 4;
+  }
+  move() {
+    this.x += this.v * Math.cos(this.ang);
+    this.y += this.v * Math.sin(this.ang);
+    this.ang += Math.random() * (20 * Math.PI / 180) - (10 * Math.PI / 180);
+  }
+  show() {
+    c.beginPath();
+    c.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
+    c.fillStyle = "#fddba3";
+    c.shadowBlur = 8;      /* soft glow effect */
+    c.shadowColor = "#fddba3";
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  if (f.length < 100) {
+    for (let j = 0; j < 10; j++) f.push(new firefly());
+  }
+  for (let i = 0; i < f.length; i++) {
+    f[i].move();
+    f[i].show();
+    if (f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h) {
+      f.splice(i, 1);
+    }
+  }
+}
+
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+});
+
+loop();
+</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            offset: 100, // offset (in px) from the original trigger point
+            once: true, // whether animation should happen only once
+        });
+    </script>
+</body>
+</html>
